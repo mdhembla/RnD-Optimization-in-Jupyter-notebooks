@@ -1,0 +1,272 @@
+Module(
+    body=[
+        Import(
+            lineno=2,
+            col_offset=0,
+            end_lineno=2,
+            end_col_offset=31,
+            names=[alias(name='matplotlib.pyplot', asname='plt')],
+        ),
+        Assign(
+            lineno=4,
+            col_offset=0,
+            end_lineno=4,
+            end_col_offset=54,
+            targets=[Name(lineno=4, col_offset=0, end_lineno=4, end_col_offset=4, id='perc', ctx=Store())],
+            value=BinOp(
+                lineno=4,
+                col_offset=7,
+                end_lineno=4,
+                end_col_offset=54,
+                left=Call(
+                    lineno=4,
+                    col_offset=7,
+                    end_lineno=4,
+                    end_col_offset=48,
+                    func=Attribute(
+                        lineno=4,
+                        col_offset=7,
+                        end_lineno=4,
+                        end_col_offset=32,
+                        value=Subscript(
+                            lineno=4,
+                            col_offset=7,
+                            end_lineno=4,
+                            end_col_offset=19,
+                            value=Name(lineno=4, col_offset=7, end_lineno=4, end_col_offset=9, id='df', ctx=Load()),
+                            slice=Constant(lineno=4, col_offset=10, end_lineno=4, end_col_offset=18, value='Origin', kind=None),
+                            ctx=Load(),
+                        ),
+                        attr='value_counts',
+                        ctx=Load(),
+                    ),
+                    args=[],
+                    keywords=[
+                        keyword(
+                            lineno=4,
+                            col_offset=33,
+                            end_lineno=4,
+                            end_col_offset=47,
+                            arg='normalize',
+                            value=Constant(lineno=4, col_offset=43, end_lineno=4, end_col_offset=47, value=True, kind=None),
+                        ),
+                    ],
+                ),
+                op=Mult(),
+                right=Constant(lineno=4, col_offset=51, end_lineno=4, end_col_offset=54, value=100, kind=None),
+            ),
+            type_comment=None,
+        ),
+        Expr(
+            lineno=5,
+            col_offset=0,
+            end_lineno=5,
+            end_col_offset=21,
+            value=Call(
+                lineno=5,
+                col_offset=0,
+                end_lineno=5,
+                end_col_offset=21,
+                func=Attribute(
+                    lineno=5,
+                    col_offset=0,
+                    end_lineno=5,
+                    end_col_offset=9,
+                    value=Name(lineno=5, col_offset=0, end_lineno=5, end_col_offset=4, id='perc', ctx=Load()),
+                    attr='plot',
+                    ctx=Load(),
+                ),
+                args=[],
+                keywords=[
+                    keyword(
+                        lineno=5,
+                        col_offset=10,
+                        end_lineno=5,
+                        end_col_offset=20,
+                        arg='kind',
+                        value=Constant(lineno=5, col_offset=15, end_lineno=5, end_col_offset=20, value='pie', kind=None),
+                    ),
+                ],
+            ),
+        ),
+    ],
+    type_ignores=[],
+)
+
+[<ast.Import object at 0x7a81c1a41fa0>, <ast.Assign object at 0x7a81c1a41ee0>, <ast.Expr object at 0x7a81c1a41a00>]
+no_of_actions
+X
+np
+isPrime
+A
+x_coords
+a2
+a1
+Conversion complete.
+<ast.Import object at 0x7c1984ac7fa0>
+no_of_actions
+X
+np
+isPrime
+A
+x_coords
+a2
+a1
+Conversion complete.
+<ast.Import object at 0x7e2e5dbe3fa0>
+no_of_actions
+X
+np
+isPrime
+A
+x_coords
+a2
+a1
+Conversion complete.
+<ast.Import object at 0x7c4447aecfa0>
+no_of_actions
+X
+np
+isPrime
+A
+x_coords
+a2
+a1
+Conversion complete.
+A
+np
+R
+A
+n
+i
+range
+int
+np
+n
+n
+i
+B
+np
+isPrime
+R
+C
+np
+R
+B
+print
+C
+csv
+df
+pd
+csv
+df
+i
+df
+df
+i
+df
+i
+no_of_actions
+df
+print
+no_of_actions
+df
+df
+print
+df
+print
+df
+print
+df
+df
+perc
+df
+perc
+no_of_actions
+print
+hello
+X
+np
+isPrime
+A
+P
+A
+np
+X
+plt
+P
+plt
+x_coords
+y_coords
+plt
+x_coords
+y_coords
+a1
+a2
+a1
+a1
+Conversion complete.
+Conversion complete.
+Conversion complete.
+Conversion complete.
+Conversion complete.
+#Q1
+import numpy as np
+
+A = np.arange(1, 101)
+R = A.reshape((10, 10))
+
+def isPrime(n):
+  if n < 2:
+    return 0
+  else:
+    for i in range(2, int(np.sqrt(n)) + 1):
+      if n % i == 0:
+        return 0
+    return 1
+
+B = np.vectorize(isPrime)(R)
+
+C = np.concatenate((R,B))
+print(C)
+Conversion complete.
+#Q1
+import numpy as np
+
+A = np.arange(1, 101)
+R = A.reshape((10, 10))
+
+def isPrime(n):
+  if n < 2:
+    return 0
+  else:
+    for i in range(2, int(np.sqrt(n)) + 1):
+      if n % i == 0:
+        return 0
+    return 1
+
+B = np.vectorize(isPrime)(R)
+
+C = np.concatenate((R,B))
+print(C)
+Conversion complete.
+#Q1
+import numpy as np
+
+A = np.arange(1, 101)
+R = A.reshape((10, 10))
+
+def isPrime(n):
+  if n < 2:
+    return 0
+  else:
+    for i in range(2, int(np.sqrt(n)) + 1):
+      if n % i == 0:
+        return 0
+    return 1
+
+B = np.vectorize(isPrime)(R)
+
+C = np.concatenate((R,B))
+print(C)
+Conversion complete.
